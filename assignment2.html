@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Shop - Order</title>
+    <link rel="icon" href="./img/pizza.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to Our Pizza Place</h1>
+        <p>Get your pizza delivered fresh!</p>
+        <!-- Pizza Shop Image -->
+        <img src="./img/pizza.jpeg" alt="Pizza Place" class="main-header-image" style="width: 300px; height: auto;">
+    </header>
+
+    <!-- Pizza Order Form -->
+    <section id="pizza-order-section">
+        <h2>Place Your Pizza Order</h2>
+        
+        <!-- Sample Pizza Image -->
+        <img src="./img/Pizza-logo-design-template-Vector-PNG.png" alt="Pizza Sample" class="order-form-image" style="width: 200px; height: auto;">
+
+        <form method="GET">
+            <div>
+                <label for="customer-name">Name:</label>
+                <input type="text" id="customer-name" name="customerName" required>
+            </div>
+
+            <div>
+                <label for="customer-email">Email:</label>
+                <input type="email" id="customer-email" name="customerEmail" required>
+            </div>
+
+            <div>
+                <label for="contact-number">Phone Number:</label>
+                <input type="tel" id="contact-number" name="contactNumber" required>
+            </div>
+
+            <div>
+                <label for="pizza-quantity">How many pizzas?</label>
+                <input type="number" id="pizza-quantity" name="pizzaQuantity" min="1" required>
+            </div>
+
+            <div>
+                <label>Pizza Size:</label>
+                <div>
+                    <input type="radio" id="small-size" name="pizzaSize" value="Small" required>
+                    <label for="small-size">Small</label>
+                </div>
+                <div>
+                    <input type="radio" id="medium-size" name="pizzaSize" value="Medium">
+                    <label for="medium-size">Medium</label>
+                </div>
+                <div>
+                    <input type="radio" id="large-size" name="pizzaSize" value="Large">
+                    <label for="large-size">Large</label>
+                </div>
+            </div>
+
+            <div>
+                <label>Choose your toppings:</label>
+                <div>
+                    <input type="checkbox" id="add-pepperoni" name="pizzaToppings" value="Pepperoni">
+                    <label for="add-pepperoni">Pepperoni</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="add-mushrooms" name="pizzaToppings" value="Mushrooms">
+                    <label for="add-mushrooms">Mushrooms</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="add-onions" name="pizzaToppings" value="Onions">
+                    <label for="add-onions">Onions</label>
+                </div>
+            </div>
+
+            <div>
+                <label for="extra-notes">Special Instructions:</label>
+                <textarea id="extra-notes" name="extraNotes" rows="4" cols="50"></textarea>
+            </div>
+
+            <div>
+                <button type="submit">Submit Order</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Confirmation Section -->
+    <section id="order-confirmation-section" style="display:none;">
+        <h2>Order Confirmation</h2>
+        <div id="order-confirmation-message">
+            <p>Your order is confirmed!</p>
+            <p>Name: <span id="confirm-customer-name"></span></p>
+            <p>Email: <span id="confirm-customer-email"></span></p>
+            <p>Phone: <span id="confirm-contact-number"></span></p>
+            <p>Number of Pizzas: <span id="confirm-pizza-quantity"></span></p>
+            <p>Size: <span id="confirm-pizza-size"></span></p>
+            <p>Toppings: <span id="confirm-pizza-toppings"></span></p>
+            <p>Special Instructions: <span id="confirm-extra-notes"></span></p>
+        </div>
+    </section>
+</body>
+</html>
